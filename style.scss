@@ -59,54 +59,20 @@ a:hover {
       top: 5px;
       left: 20px;
     }
-    #settingButton:hover{
-      transition: .4s;
-      filter: brightness(.7);
-    }
-  }
-}
 
-
-/******************************
-    Media Query for Header
-******************************/
-
-@media screen and (max-width: 1366px) {
-  .header{
-    h1{
-      margin-left: 1em !important;
-    }
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .header{
     .header-logo-heading{
       width: 100%;
       h1{
         margin: 0px auto;
       }
     }
-  }
-}
 
-@media screen and (max-width: 1024px) {
-  .header{
-    h1{
-      margin-left: 3em !important;
+    #settingButton:hover{
+      transition: .4s;
+      filter: brightness(.7);
     }
   }
 }
-
-@media screen and (max-width: 768px) {
-  .header{
-    h1{
-      margin-left: 3em !important;
-      font-size: 30px;
-    }
-  }
-}
-
 
 .search-top {
   color: white;
@@ -123,13 +89,13 @@ a:hover {
       border-top-left-radius: 25px;
       border-bottom-left-radius: 25px;
       padding-left: 20px;
-      font-size: 1.5rem;
+      font-size: 20px;
     }
     input:focus {
       outline: none;
     }
     input::placeholder {
-      font-size: 1.2rem;
+      font-size: 20px;
       color: var(--main-blue);
       filter: opacity(0.5);
     }
@@ -167,13 +133,13 @@ a:hover {
 
 @media screen and (max-width: 1024px) {
   .search-top form a.remove-text i {
-    right: 30px;
+    right: 75px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .search-top form a.remove-text i {
-    right: -60px;
+    right: -5px;
   }
 }
 
