@@ -8,6 +8,8 @@ $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
 
   // datepicker
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({
+    format: 'dd/mm/yyyy'
+ });
 
 });

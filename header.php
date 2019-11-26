@@ -3,11 +3,11 @@
 <header class="header">
   <div class="container">
     <div id="settingDiv" class="navigation">
-      <div class="d-inline-flex align-items-center">
+      <div class="d-inline-flex align-items-center header-logo-heading">
         <a href="javasctipt:void(0);">
           <img src="logo.png" alt="logo">
         </a>
-        <h1 class="m-0 ml-2">Titan Feedback Update</h1>
+        <h1>Titan Feedback Update</h1>
       </div>
       <a id="settingButton">
         <i class="fas fa-cogs toggler fa-2x"></i>
@@ -21,9 +21,14 @@
   <div class="container">
     <div class="row">
       <div class="col-6 offset-3">
-        <form id="searchForm" method="get">
-          <input  type="textarea" placeholder="Search" cols="50"  id="searchDescription" name="searchDescription" value="<?php echo $searchDescription ?>" size="20">
-          <a  onclick="searchFunc()" id="search" name="search" value=<?php echo $baseUrl."tab=".$settings['tab']."&startDate=".$settings['startDate']."&assignedUser=".$settings['assignedUser']."&sortBy=".$settings['sortBy']."&orderBy=".$settings['orderBy']."&page=1" ?>>
+        <form id="searchForm" method="get" class="position-relative">
+
+            <input  type="textarea" placeholder="Search" cols="50"  id="searchDescription" name="searchDescription" value="<?php echo $searchDescription ?>" size="20">
+            <a href="javascript:void(0);" class="remove-text">
+              <i class="fa fa-times text-black-50 position-absolute"></i>
+            </a>
+
+          <a  onclick="searchFunc()" id="search" class="search-btn" name="search" value=<?php echo $baseUrl."tab=".$settings['tab']."&startDate=".$settings['startDate']."&assignedUser=".$settings['assignedUser']."&sortBy=".$settings['sortBy']."&orderBy=".$settings['orderBy']."&page=1" ?>>
             <i class="fas fa-search"></i>
           </a>
         </form>
@@ -42,13 +47,13 @@
         <a href="javascript:void(0);" class="toggler">
           <i class="fa fa-times fa-2x"></i>
         </a>
-        <h2>Settings</h2>
+        <h3>Settings</h3>
       </div>
 
       <div class="calendar-icon">
         <div class="form-group w-100">
           <label for="startDate">Start Date</label>
-          <input readonly class="form-control datepicker" id="startDate" name="startDate" autocomplete="off" value="<?php echo $settings["startDate"] ?>">
+          <input readonly class="form-control datepicker" data-date-format="dd/mm/yyyy" id="startDate" name="startDate" autocomplete="off" value="<?php echo $settings["startDate"] ?>">
           <i class="fas fa-calendar-alt"></i>
         </div>
       </div>

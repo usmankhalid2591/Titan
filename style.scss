@@ -53,14 +53,60 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     img {
-      width: 115px;
+      width: 100px;
       margin-bottom: 5px;
       position: absolute;
       top: 5px;
       left: 20px;
     }
+    #settingButton:hover{
+      transition: .4s;
+      filter: brightness(.7);
+    }
   }
 }
+
+
+/******************************
+    Media Query for Header
+******************************/
+
+@media screen and (max-width: 1366px) {
+  .header{
+    h1{
+      margin-left: 1em !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .header{
+    .header-logo-heading{
+      width: 100%;
+      h1{
+        margin: 0px auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header{
+    h1{
+      margin-left: 3em !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header{
+    h1{
+      margin-left: 3em !important;
+      font-size: 30px;
+    }
+  }
+}
+
 
 .search-top {
   color: white;
@@ -68,7 +114,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 40px;
     margin: 0px;
     input {
       flex-grow: 1;
@@ -83,11 +129,17 @@ a:hover {
       outline: none;
     }
     input::placeholder {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--main-blue);
       filter: opacity(0.5);
     }
-    a {
+    a.remove-text{
+      i{
+        right: 75px;
+        top: 12px;
+      }
+    }
+    a.search-btn {
       background: var(--main-pink);
       height: 100%;
       display: flex;
@@ -95,9 +147,36 @@ a:hover {
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
       padding: 0px 20px;
+      transition: .4s;
     }
+    a.search-btn:hover{
+      background-color: white;
+      border: 1px solid var(--main-pink);
+      border-left: none;
+      i{
+        color: var(--main-pink);
+      }
+    }
+
   }
 }
+
+/******************************
+    Media Query for Search top
+******************************/
+
+@media screen and (max-width: 1024px) {
+  .search-top form a.remove-text i {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-top form a.remove-text i {
+    right: -60px;
+  }
+}
+
 
 .sidebar {
   position: fixed;
@@ -120,7 +199,7 @@ a:hover {
       margin-bottom: 5px;
     }
 
-    h2 {
+    h3 {
       color: var(--main-blue);
       font-weight: 600;
     }
@@ -166,68 +245,79 @@ a:hover {
   a.active {
     background-color: var(--main-pink) !important;
     color: white !important;
-    box-shadow: 0px 0px 2px 0px;
-    transform: scale(1.002);
+    box-shadow: 0px 0px 3px 0px;
+    transform: scale(1.02);
     i {
       color: white;
     }
   }
-}
-
-.table {
-  border-collapse: unset;
-  border: 1px solid var(--main-gray);
-  color: var(--main-blue);
-
-  a {
-    color: var(--main-blue);
-  }
-
-  .table-head {
-    th {
-      border: none;
-      vertical-align: top;
-      white-space: nowrap;
-      h4 {
-        font-size: 20px;
-        font-weight: 600;
-      }
+  a:hover{
+    background-color: white !important;
+    color: var(--main-pink) !important;
+    border-color: var(--main-pink);
+    i{
+      color: var(--main-pink);
     }
   }
+}
 
-  .table-body {
-    td {
-      vertical-align: middle;
-      .btn {
-        font-weight: 600;
-        border-radius: 0px;
+.table-wrapper{
+  .table {
+    border-collapse: unset;
+    border: 1px solid var(--main-gray);
+    color: var(--main-blue);
+  
+    a {
+      color: var(--main-blue);
+    }
+  
+    .table-head {
+      th {
+        border: none;
+        vertical-align: top;
+        white-space: nowrap;
+        h4 {
+          font-size: 20px;
+          font-weight: 600;
+        }
       }
-      .btn:focus,
-      .btn:active {
-        box-shadow: none;
-        outline: none;
-      }
-      .accept-btn {
-        border-color: var(--main-blue);
-        background-color: var(--main-blue);
-        color: white;
-      }
-      .accept-btn:hover,
-      .accept-btn:active {
-        border-color: var(--main-blue);
-        background-color: white;
-        color: var(--main-blue);
-      }
-      .reject-btn {
-        border-color: var(--main-pink);
-        background-color: var(--main-pink);
-        color: white;
-      }
-      .reject-btn:hover,
-      .reject-btn:active {
-        background-color: var(--main-pink);
-        background-color: white;
-        color: var(--main-pink);
+    }
+  
+    .table-body {
+      td {
+        vertical-align: middle;
+        max-width: 300px;
+        .btn {
+          font-weight: 600;
+          border-radius: 0px;
+        }
+        .btn:focus,
+        .btn:active {
+          box-shadow: none;
+          outline: none;
+        }
+        .accept-btn {
+          border-color: var(--main-blue);
+          background-color: var(--main-blue);
+          color: white;
+        }
+        .accept-btn:hover,
+        .accept-btn:active {
+          border-color: var(--main-blue);
+          background-color: white;
+          color: var(--main-blue);
+        }
+        .reject-btn {
+          border-color: var(--main-pink);
+          background-color: var(--main-pink);
+          color: white;
+        }
+        .reject-btn:hover,
+        .reject-btn:active {
+          background-color: var(--main-pink);
+          background-color: white;
+          color: var(--main-pink);
+        }
       }
     }
   }

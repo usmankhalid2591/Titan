@@ -1,21 +1,3 @@
-/****************loader *****/
-.loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #003366; /* Blue */
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  animation: spin 2s linear infinite;
-  position: absolute;
-  left: 40%;
-  top:50%;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-/****************************/
 * {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -82,11 +64,49 @@ a:hover {
 }
 
 .header .navigation img {
-  width: 115px;
+  width: 100px;
   margin-bottom: 5px;
   position: absolute;
   top: 5px;
   left: 20px;
+}
+
+.header .navigation #settingButton:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+/******************************
+    Media Query for Header
+******************************/
+@media screen and (max-width: 1366px) {
+  .header h1 {
+    margin-left: 1em !important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .header .header-logo-heading {
+    width: 100%;
+  }
+  .header .header-logo-heading h1 {
+    margin: 0px auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header h1 {
+    margin-left: 3em !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    margin-left: 3em !important;
+    font-size: 30px;
+  }
 }
 
 .search-top {
@@ -149,7 +169,12 @@ a:hover {
           filter: opacity(0.5);
 }
 
-.search-top form a {
+.search-top form a.remove-text i {
+  right: 75px;
+  top: 18px;
+}
+
+.search-top form a.search-btn {
   background: var(--main-pink);
   height: 100%;
   display: -webkit-box;
@@ -161,6 +186,33 @@ a:hover {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   padding: 0px 20px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.search-top form a.search-btn:hover {
+  background-color: white;
+  border: 1px solid var(--main-pink);
+  border-left: none;
+}
+
+.search-top form a.search-btn:hover i {
+  color: var(--main-pink);
+}
+
+/******************************
+    Media Query for Search top
+******************************/
+@media screen and (max-width: 1024px) {
+  .search-top form a.remove-text i {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-top form a.remove-text i {
+    right: -60px;
+  }
 }
 
 .sidebar {
@@ -194,7 +246,7 @@ a:hover {
   margin-bottom: 5px;
 }
 
-.sidebar #settingForm h2 {
+.sidebar #settingForm h3 {
   color: var(--main-blue);
   font-weight: 600;
 }
@@ -238,74 +290,85 @@ a:hover {
 .navigation-tabs-main a.active {
   background-color: var(--main-pink) !important;
   color: white !important;
-  -webkit-box-shadow: 0px 0px 2px 0px;
-          box-shadow: 0px 0px 2px 0px;
-  -webkit-transform: scale(1.002);
-          transform: scale(1.002);
+  -webkit-box-shadow: 0px 0px 3px 0px;
+          box-shadow: 0px 0px 3px 0px;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .navigation-tabs-main a.active i {
   color: white;
 }
 
-.table {
+.navigation-tabs-main a:hover {
+  background-color: white !important;
+  color: var(--main-pink) !important;
+  border-color: var(--main-pink);
+}
+
+.navigation-tabs-main a:hover i {
+  color: var(--main-pink);
+}
+
+.table-wrapper .table {
   border-collapse: unset;
   border: 1px solid var(--main-gray);
   color: var(--main-blue);
 }
 
-.table a {
+.table-wrapper .table a {
   color: var(--main-blue);
 }
 
-.table .table-head th {
+.table-wrapper .table .table-head th {
   border: none;
   vertical-align: top;
   white-space: nowrap;
 }
 
-.table .table-head th h4 {
+.table-wrapper .table .table-head th h4 {
   font-size: 20px;
   font-weight: 600;
 }
 
-.table .table-body td {
+.table-wrapper .table .table-body td {
   vertical-align: middle;
+  max-width: 300px;
 }
 
-.table .table-body td .btn {
+.table-wrapper .table .table-body td .btn {
   font-weight: 600;
   border-radius: 0px;
 }
 
-.table .table-body td .btn:focus,
-.table .table-body td .btn:active {
+.table-wrapper .table .table-body td .btn:focus,
+.table-wrapper .table .table-body td .btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
 }
 
-.table .table-body td .accept-btn {
+.table-wrapper .table .table-body td .accept-btn {
   border-color: var(--main-blue);
   background-color: var(--main-blue);
   color: white;
 }
 
-.table .table-body td .accept-btn:hover,
-.table .table-body td .accept-btn:active {
+.table-wrapper .table .table-body td .accept-btn:hover,
+.table-wrapper .table .table-body td .accept-btn:active {
   border-color: var(--main-blue);
   background-color: white;
   color: var(--main-blue);
 }
 
-.table .table-body td .reject-btn {
+.table-wrapper .table .table-body td .reject-btn {
   border-color: var(--main-pink);
   background-color: var(--main-pink);
   color: white;
 }
 
-.table .table-body td .reject-btn:hover,
-.table .table-body td .reject-btn:active {
+.table-wrapper .table .table-body td .reject-btn:hover,
+.table-wrapper .table .table-body td .reject-btn:active {
   background-color: var(--main-pink);
   background-color: white;
   color: var(--main-pink);
