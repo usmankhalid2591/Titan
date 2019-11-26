@@ -10,6 +10,6 @@ $(document).ready(function () {
   // datepicker
   $('.datepicker').datepicker({
     format: 'dd/mm/yyyy'
- });
+  });
 
 });

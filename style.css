@@ -80,8 +80,8 @@ a:hover {
 }
 
 .header .navigation #settingButton:hover {
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
 }
@@ -163,8 +163,8 @@ a:hover {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   padding: 0px 20px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .search-top form a.search-btn:hover {
@@ -241,6 +241,24 @@ a:hover {
 
 .sidebar .backButton {
   background-color: var(--main-blue) !important;
+  border-color: var(--main-blue);
+  color: white;
+  font-weight: 600;
+  border-radius: 0px;
+}
+
+.sidebar .backButton:focus,
+.sidebar .backButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.sidebar .backButton:hover,
+.sidebar .backButton:active {
+  border-color: var(--main-blue);
+  background-color: white !important;
+  color: var(--main-blue);
 }
 
 .sidebar-right-show {

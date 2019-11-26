@@ -60,16 +60,16 @@ a:hover {
       left: 20px;
     }
 
-    .header-logo-heading{
+    .header-logo-heading {
       width: 100%;
-      h1{
+      h1 {
         margin: 0px auto;
       }
     }
 
-    #settingButton:hover{
-      transition: .4s;
-      filter: brightness(.7);
+    #settingButton:hover {
+      transition: 0.4s;
+      filter: brightness(0.7);
     }
   }
 }
@@ -99,8 +99,8 @@ a:hover {
       color: var(--main-blue);
       filter: opacity(0.5);
     }
-    a.remove-text{
-      i{
+    a.remove-text {
+      i {
         right: 75px;
         top: 12px;
       }
@@ -113,17 +113,16 @@ a:hover {
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
       padding: 0px 20px;
-      transition: .4s;
+      transition: 0.4s;
     }
-    a.search-btn:hover{
+    a.search-btn:hover {
       background-color: white;
       border: 1px solid var(--main-pink);
       border-left: none;
-      i{
+      i {
         color: var(--main-pink);
       }
     }
-
   }
 }
 
@@ -142,7 +141,6 @@ a:hover {
     right: -5px;
   }
 }
-
 
 .sidebar {
   position: fixed;
@@ -184,6 +182,21 @@ a:hover {
 
   .backButton {
     background-color: var(--main-blue) !important;
+    border-color: var(--main-blue);
+    color: white;
+    font-weight: 600;
+    border-radius: 0px;
+  }
+  .backButton:focus,
+  .backButton:active {
+    box-shadow: none;
+    outline: none;
+  }
+  .backButton:hover,
+  .backButton:active {
+    border-color: var(--main-blue);
+    background-color: white !important;
+    color: var(--main-blue);
   }
 }
 
@@ -217,26 +230,26 @@ a:hover {
       color: white;
     }
   }
-  a:hover{
+  a:hover {
     background-color: white !important;
     color: var(--main-pink) !important;
     border-color: var(--main-pink);
-    i{
+    i {
       color: var(--main-pink);
     }
   }
 }
 
-.table-wrapper{
+.table-wrapper {
   .table {
     border-collapse: unset;
     border: 1px solid var(--main-gray);
     color: var(--main-blue);
-  
+
     a {
       color: var(--main-blue);
     }
-  
+
     .table-head {
       th {
         border: none;
@@ -248,7 +261,7 @@ a:hover {
         }
       }
     }
-  
+
     .table-body {
       td {
         vertical-align: middle;
