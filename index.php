@@ -11,7 +11,6 @@ $settings["assignedUser"] = "all";
 $settings["startDate"] = "01/01/2018";
 $settings["sortBy"] = "date_start";
 $settings["orderBy"] = "DESC";
-
 if (isset($_GET['page'])){
         $page=(int)trim($_GET['page']);
         $offset = $limit * ($page-1);
