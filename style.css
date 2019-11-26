@@ -1,0 +1,350 @@
+/****************loader *****/
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #003366; /* Blue */
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 40%;
+  top:50%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/****************************/
+* {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --main-pink: #cc0066;
+  --main-blue: #003366;
+  --main-gray: #eeeeee;
+}
+
+/*****************************
+            Generic
+*****************************/
+.margin-tb {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.margin-t {
+  margin-top: 30px;
+}
+
+.margin-b {
+  margin-bottom: 30px;
+}
+
+a:hover {
+  cursor: pointer !important;
+}
+
+.tooltip .tooltip-inner {
+  width: 300px !important;
+  max-width: 300px;
+}
+
+/******************************
+    Css for Header.php
+******************************/
+.header {
+  background: var(--main-blue);
+  color: white;
+  padding: 10px 0;
+}
+
+.header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navigation img {
+  width: 115px;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+.search-top {
+  color: white;
+}
+
+.search-top form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin: 0px;
+}
+
+.search-top form input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  border: 1px solid var(--main-blue);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
+
+.search-top form input:focus {
+  outline: none;
+}
+
+.search-top form input::-webkit-input-placeholder {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
+.search-top form input:-ms-input-placeholder {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  filter: opacity(0.5);
+}
+
+.search-top form input::-ms-input-placeholder {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  filter: opacity(0.5);
+}
+
+.search-top form input::placeholder {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
+.search-top form a {
+  background: var(--main-pink);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0px 20px;
+}
+
+.sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0px;
+  height: 100vh;
+  width: 300px;
+  border: 1px solid var(--main-gray);
+  background: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 30px 40px;
+}
+
+.sidebar #settingForm {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar #settingForm .fa-times {
+  color: var(--main-blue);
+  margin-bottom: 5px;
+}
+
+.sidebar #settingForm h2 {
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.sidebar #settingForm .calendar-icon {
+  position: relative;
+}
+
+.sidebar #settingForm .calendar-icon .fa-calendar-alt {
+  position: absolute;
+  right: 8px;
+  bottom: 28px;
+  color: var(--main-blue);
+}
+
+.sidebar .backButton {
+  background-color: var(--main-blue) !important;
+}
+
+.sidebar-right-show {
+  right: 0px !important;
+}
+
+/******************************Css for Header.php End******************************/
+/******************************
+    Css for index.php
+******************************/
+.navigation-tabs-main a {
+  background-color: #fad9ed;
+  color: var(--main-pink);
+  border-top-right-radius: 25px !important;
+  border-top-left-radius: 25px !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navigation-tabs-main a i {
+  color: var(--main-pink);
+}
+
+.navigation-tabs-main a.active {
+  background-color: var(--main-pink) !important;
+  color: white !important;
+  -webkit-box-shadow: 0px 0px 2px 0px;
+          box-shadow: 0px 0px 2px 0px;
+  -webkit-transform: scale(1.002);
+          transform: scale(1.002);
+}
+
+.navigation-tabs-main a.active i {
+  color: white;
+}
+
+.table {
+  border-collapse: unset;
+  border: 1px solid var(--main-gray);
+  color: var(--main-blue);
+}
+
+.table a {
+  color: var(--main-blue);
+}
+
+.table .table-head th {
+  border: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table .table-head th h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.table .table-body td {
+  vertical-align: middle;
+}
+
+.table .table-body td .btn {
+  font-weight: 600;
+  border-radius: 0px;
+}
+
+.table .table-body td .btn:focus,
+.table .table-body td .btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.table .table-body td .accept-btn {
+  border-color: var(--main-blue);
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.table .table-body td .accept-btn:hover,
+.table .table-body td .accept-btn:active {
+  border-color: var(--main-blue);
+  background-color: white;
+  color: var(--main-blue);
+}
+
+.table .table-body td .reject-btn {
+  border-color: var(--main-pink);
+  background-color: var(--main-pink);
+  color: white;
+}
+
+.table .table-body td .reject-btn:hover,
+.table .table-body td .reject-btn:active {
+  background-color: var(--main-pink);
+  background-color: white;
+  color: var(--main-pink);
+}
+
+.pagination-bottom form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-bottom form li {
+  margin: 0px 20px;
+}
+
+.pagination-bottom form li a {
+  color: var(--main-blue);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.pagination-bottom form li a:hover {
+  background-color: var(--main-blue);
+  color: white;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.pagination-bottom form li .chevron {
+  border: none;
+}
+
+.pagination-bottom form li .chevron:hover {
+  color: var(--main-blue);
+  background-color: white;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+/*# sourceMappingURL=style.css.map */

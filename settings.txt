@@ -1,0 +1,4 @@
+startDate=2018-01-01
+sortBy=date_start
+orderBy=ASC
+assignedUser=all
